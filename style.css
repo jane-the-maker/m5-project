@@ -195,6 +195,7 @@ nav__link--anchor {
 
 .project__img {
   width: 100%; 
+  transition: all 600ms ease;
 }
 
 .project__wrapper {
@@ -204,8 +205,7 @@ nav__link--anchor {
   overflow: hidden;
 }
 
-.project__wrapper:hover
-.project__description {
+.project__wrapper:hover .project__description {
   opacity: 1;
   transform: translateY(-50%);
 }
@@ -213,7 +213,6 @@ nav__link--anchor {
 .project__wrapper:hover .project__img {
   transform: scale(1.07%);
   filter: blur(5px);
-
 }
 
 .project__description {
@@ -227,6 +226,11 @@ nav__link--anchor {
   max-width: 550px;
 }
 
+.project__wrapper:hover .project__wrapper--bg {
+  opacity: 0.7;
+  visibility: visible;
+}
+
 .project__wrapper--bg {
   position: absolute;
   top: 0;
@@ -234,7 +238,9 @@ nav__link--anchor {
   width: 100%;
   height: 100%;
   background-color: #1c1d25;
-  opacity: 0.7;
+  opacity: 0;
+  transition: all 450ms ease;
+  visibility: hidden;
 }
 
 .project__description--title {
